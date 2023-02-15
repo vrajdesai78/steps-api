@@ -63,6 +63,6 @@ app.get("/getSteps", (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
+app.listen(`$PORT` || 3000, () => {
   console.log("Steps API server listening on port 3000");
 });
