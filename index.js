@@ -18,7 +18,7 @@ const firebaseConfig = {
 
 // Initialize Express app
 const app = express();
-app.use(cors);
+app.use(cors());
 
 const firebase = initializeApp(firebaseConfig);
 const database = getDatabase(firebase);
