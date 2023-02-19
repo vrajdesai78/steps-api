@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, onValue, get, child } from "firebase/database";
+import cors from 'cors';
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -17,6 +18,7 @@ const firebaseConfig = {
 
 // Initialize Express app
 const app = express();
+app.use(cors);
 
 const firebase = initializeApp(firebaseConfig);
 const database = getDatabase(firebase);
